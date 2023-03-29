@@ -9,10 +9,32 @@ module.exports = {
 		},
 	},
 	daisyui: {
-		themes: {
-			dark: {},
-			light: {},
-		},
+		themes: [
+			{
+				dark: {
+					'primary': '#0F94D2',
+					'secondary': '#42AADD',
+					'accent': '#75BFE8',
+					'neutral': '#032230',
+					'base-100': '#DBEAFE',
+					'info': '#75BFE8',
+					'success': '#36D399',
+					'warning': '#FBBD23',
+					'error': '#F87272',
+				},
+				light: {
+					'primary': '#75BFE8',
+					'secondary': '#0C78AA',
+					'accent': '#0F94D2',
+					'neutral': '#DBEAFE',
+					'base-100': '#032230',
+					'info': '#3ABFF8',
+					'success': '#36D399',
+					'warning': '#FBBD23',
+					'error': '#F87272',
+				},
+			},
+		],
 	},
 	plugins: [
 		require('@tailwindcss/line-clamp'),
