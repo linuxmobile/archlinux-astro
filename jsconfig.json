@@ -1,0 +1,9 @@
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@services/*": ["src/services/*"],
+      "@api/*": ["src/api/*"]
+    }
+  }
+}

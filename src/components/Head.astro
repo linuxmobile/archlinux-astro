@@ -1,0 +1,40 @@
+---
+const { title = 'Archlinux', description = 'A simple, lightweight distribution', image = '/lnxmbl.svg' } = Astro.props
+---
+
+<head>
+	<meta charset='utf-8' />
+	<meta name='viewport' content='initial-scale=1.0, width=device-width, viewport-fit=cover' />
+	<title>{title}</title>
+	<meta name='description' content={description} />
+	<meta name='theme-color' content='#333333' />
+	<meta name='msapplication-navbutton-color' content='#333333' />
+	<meta name='application-name' content='LNXMBL' />
+	<meta name='apple-mobile-web-app-capable' content='yes' />
+	<meta name='apple-mobile-web-app-status-bar-style' content='default' />
+	<meta name='apple-mobile-web-app-title' content='LNXMBL' />
+	<meta name='format-detection' content='telephone=no' />
+	<meta name='mobile-web-app-capable' content='yes' />
+	<meta name='msapplication-TileColor' content='#333333' />
+	<meta name='msapplication-tap-highlight' content='no' />
+	<link rel='icon' href='/favicon.svg' type='image/svg+xml' />
+	<link rel='mask-icon' href='/mask-icon.svg' color='#000000' />
+
+	<meta property='og:url' content='https://linu.dev/' />
+	<meta property='og:type' content='website' />
+	<meta property='og:title' content={title} />
+	<meta property='og:description' content={description} />
+	<meta property='og:image' content={image} />
+	<link rel='canonical' href='https://linu.dev/' />
+
+	<meta name='twitter:card' content='summary_large_image' />
+	<meta name='twitter:site' content='@linuxmobileok' />
+	<meta name='twitter:creator' content='@linuxmobileok' />
+	<meta name='twitter:title' content={title} />
+	<meta name='twitter:description' content={description} />
+	<meta name='twitter:image' content={image} />
+
+	<link rel='preload' href='/Mona-Sans.woff2' as='font' type='font/woff2' crossorigin />
+	<link rel='preload' href='/Hubot-Sans.woff2' as='font' type='font/woff2' crossorigin />
+	<link rel='preload' href='/main.css' as='style' onload="this.onload=null;this.rel='stylesheet'" />
+</head>
