@@ -1,0 +1,74 @@
+---
+const links = {
+  documentation: {
+    'wiki': 'https://wiki.archlinux.org/',
+    'Manual Pages': 'https://man.archlinux.org/',
+    'Installation guide': 'https://wiki.archlinux.org/title/Installation_guide',
+  },
+  Community: {
+    'Mailing list': 'https://lists.archlinux.org/',
+    'IRC Channel': 'https://wiki.archlinux.org/title/IRC_channels',
+    'Planet Arch': 'https://planet.archlinux.org/',
+    'International Communities': 'https://wiki.archlinux.org/title/International_communities',
+  },
+  Support: {
+    'Donate': 'https://archlinux.org/donate/',
+    'Products via Unixstickers': 'https://www.unixstickers.com/tag/archlinux',
+    'T-shirts via Freewear': 'https://www.freewear.org/?page=list_items&org=Archlinux',
+    'T-shirts via HELLOTUX': 'https://www.hellotux.com/arch',
+  },
+  Tools: {
+    'Mirrorlist Updater': 'https://archlinux.org/mirrorlist/',
+    'Mirror List': 'https://archlinux.org/mirrors/',
+    'Mirror Status': 'https://archlinux.org/mirrors/status/',
+  },
+  Development: {
+    'Getting involved': 'https://wiki.archlinux.org/title/Getting_involved',
+    'Projects in Git': 'https://gitlab.archlinux.org/archlinux/',
+    'SVN Repositories': 'https://archlinux.org/svn/',
+    'Developer Wiki': 'https://wiki.archlinux.org/title/DeveloperWiki',
+    'Package Groups': 'https://archlinux.org/groups/',
+    'Todo Lists': 'https://archlinux.org/todo/',
+    'ISO Release List': 'https://archlinux.org/releng/releases/',
+    'Visualizations': 'https://archlinux.org/visualize/',
+    'Differences Reports': 'https://archlinux.org/packages/differences/',
+  },
+  People: {
+    'Developers': 'https://archlinux.org/people/developers/',
+    'Trusted Users': 'https://archlinux.org/people/trusted-users/',
+    'Support Staff': 'https://archlinux.org/people/support-staff/',
+    'Developer Fellows': 'https://archlinux.org/people/developer-fellows/',
+    'Trusted User Fellows': 'https://archlinux.org/people/trusted-user-fellows/',
+    'Support Staff Fellows': 'https://archlinux.org/people/support-staff-fellows/',
+    'Signing Master Keys': 'https://archlinux.org/master-keys/',
+  },
+  'More Resources': {
+    'Press Coverage': 'https://wiki.archlinux.org/title/Arch_Linux_press_coverage',
+    'Logos & Artwork': 'https://archlinux.org/art/',
+    'News Archives': 'https://archlinux.org/news/',
+    'RSS Feeds': 'https://archlinux.org/feeds/',
+  }
+}
+---
+<section class=''>
+  {
+    Object.keys(links).map((category) => {
+      return (
+        <div class='flex flex-col pt-6 capitalize gap-1'>
+          <h3 class='text-lg font-bold'>{category}</h3>
+          <ul class='pl-5 text-primary'>
+            {
+              Object.keys(links[category]).map((link) => {
+                return (
+                  <li class=''>
+                    <a href={links[category][link]}>{link}</a>
+                  </li>
+                )
+              })
+            }
+          </ul>
+        </div>
+      )
+    })
+  }
+</section>
