@@ -1,0 +1,40 @@
+---
+import NewsLayout from '@layouts/NewsLayout.astro'
+import { CollectionEntry, getCollection } from 'astro:content'
+
+const news = (await getCollection('news')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+)
+
+// content:
+// export async function getStaticPaths() {
+// 	const posts = await getCollection('news')
+// 	return posts.map((post) => ({
+// 		params: { slug: post.slug },
+// 		props: post
+// 	}))
+// }
+// type Props = CollectionEntry<'news'>
+// const post = Astro.props
+// const { Content } = await post.render()
+---
+
+<section class=''>
+	{
+		news.map((item) => {
+			return (
+				<article class=''>
+					<h2 class=''>{item.data.title}</h2>
+					<p class=''>{item.data.author}</p>
+					<p class=''>{item.data.publishDate}</p>
+					<a href={`/news/${item.slug}/`} class=''>Read more</a>
+				</article>
+			)
+		})
+	}
+	<!-- <article>
+		<NewsLayout {...post.data}>
+			<Content />
+		</NewsLayout>
+  </article> -->
+</section>
